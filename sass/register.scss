@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{text-decoration:none;
+    color: black;}
+.prev{
+    width: 1280px;
+    margin: 0 auto;
+}
+//nav
+.nav{
+    margin: 0 auto;
+    width: 1120;
+    height: 104px;
+    background: white;
+    padding-left:90px;
+    
+}
+.nav h1{
+    width: 200px;
+    height: 104px;
+    float: left;
+}
+.nav h1 a{display: block;
+            width: 200px;
+            height: 104px;
+            }
+.nav h1 a img{
+    width: 200px;
+    height: 48px;
+    padding-top: 28px;
+}
+.nav h1 a span{display: none;}  
+.nav h3{
+    padding-left: 26px;
+    
+    height: 104px;
+    font-size: 24px;
+    line-height: 104px;
+    float: left;
+}
+
+.pp{
+    width: 100%;
+    height: 30px;
+    border-bottom: 2px solid #d22147;
+    background:white;
+    span{float: right;
+        a{
+            color: #d22147;
+        }
+    }
+    
+}
+//main
+.main{
+   width: 100%;
+   background: #fbfbfb;
+   height: 600px; 
+   overflow: hidden;
+   form{
+      margin-top: 40px;
+       padding-top: 40px;
+       width: 880px;
+       height: 430px;
+       background: white;
+       margin: 0 auto;
+        margin-top: 40px;
+       
+       .form-1{
+           width: 100%;
+           height:56px ;
+           .p1{
+               width: 30%;
+               float: left;
+               height:56px ;
+               span{
+                   float: right;
+                   height:56px ;
+                   font-size: 14px;
+                   line-height: 56px;
+               }
+           }
+           .username{
+               width: 32%;
+               height: 50px;
+               float: left;
+               margin: 0 auto;
+               padding-left: 10px;
+               margin-left: 10px;
+               margin-right: 10px;
+           }
+           .info1{
+              
+               float: left;
+               height:56px ;
+               font-size: 14px;
+               line-height: 56px;
+           }
+       }
+       .form-2{
+           width: 100%;
+           height:56px ;
+           .p1{
+               width: 30%;
+               float: left;
+               height:56px ;
+               span{
+                   float: right;
+                   height:56px ;
+                   font-size: 14px;
+                   line-height: 56px;
+               }
+           }
+           .password{
+               width: 32%;
+               height: 50px;
+               float: left;
+               margin: 0 auto;
+               padding-left: 10px;
+               margin-left: 10px;
+               margin-right: 10px;
+           }
+           .info2{
+              
+               float: left;
+               height:56px ;
+               font-size: 14px;
+               line-height: 56px;
+           }
+       }
+       .form-3{
+           width: 100%;
+           height:56px ;
+           .p1{
+               width: 30%;
+               float: left;
+               height:56px ;
+               span{
+                   float: right;
+                   height:56px ;
+                   font-size: 14px;
+                   line-height: 56px;
+               }
+           }
+           .confirm_password{
+               width: 32%;
+               height: 50px;
+               float: left;
+               margin: 0 auto;
+               padding-left: 10px;
+               margin-left: 10px;
+               margin-right: 10px;
+           }
+           .info3{
+              
+               float: left;
+               height:56px ;
+               font-size: 14px;
+               line-height: 56px;
+           }
+       }
+       .form-4{
+           width: 100%;
+           height:56px ;
+           .p1{
+               width: 30%;
+               float: left;
+               height:56px ;
+               span{
+                   float: right;
+                   height:56px ;
+                   font-size: 14px;
+                   line-height: 56px;
+               }
+           }
+           #input_code{
+               width: 20%;
+               height: 50px;
+               float: left;
+               margin: 0 auto;
+              
+               margin-right: 10px;
+               padding-left: 10px;
+               margin-left: 10px;
+           }
+           #gen_code{
+              width: 150px;
+               height: 50px;
+               float: left;
+               margin: 0 auto;
+           }
+           .info4{
+              
+               float: left;
+               height:56px ;
+               font-size: 14px;
+               line-height: 56px;
+           }
+       }
+       .form-5{
+           padding-left: 30%;
+           width: 300px;
+           height: 56px;
+       }
+       .form-6{
+           padding-left: 30%;
+           width: 35%;
+           height: 50px;
+           #sub_btn{
+               display: block;
+               width: 100%;
+               height: 100%;
+               background: #d22147;
+               border: none;
+               font-size: 18px;
+               line-height: 100%;
+               color: white;
+           }
+           
+       }
+   }
+}
+.footer{
+    width: 290px;
+    height: 50px;
+    font-size: 12px;
+    color: black;
+    margin:30px auto;
+    text-align: center;
+    img{
+        margin: 0 auto;
+    }
+}

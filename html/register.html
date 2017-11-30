@@ -2,8 +2,67 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="../css/register.css"/>
+		<!--<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">-->
 	</head>
 	<body>
+		<div class="prev">
+			<!--nav-->
+			<div class="nav">
+				<h1>
+					<a href="#">
+						<img src="../img/images-zhuce/title.png"/>
+						<span >百悦</span>
+					</a>
+				</h1>
+				<h3>欢迎注册</h3>
+			</div>
+			<p class="pp"><span>我已注册，现在就去<a href="#">登录</a></span></p>
+			<!--main-->
+			<div class="main">
+				<form action="register.php" method="post">
+					<div class="form-1">
+						<p class="p1"><span>手机</span></p>
+						<input type="text" name="username" placeholder="手机" class="username">
+						<div class="info1">6-50位字符组成</div>
+					</div>
+					<div class="form-2">
+						<p class="p1"><span>密码</span></p>
+						<input type="password" name="password" placeholder="密码" class="password">
+						<div class="info2">6-20位字符,可由英文、数字及标点符号组成</div>
+					</div>
+					<div class="form-3">
+						<p class="p1"><span>确认密码</span></p>
+						<input type="password" name="confirm_password" placeholder="请再次输入密码" class="confirm_password">
+						<div class="info3">请再次输入密码</div>
+					</div>
+					<div class="form-4">
+						<p class="p1"><span>请输入验证码</span></p>
+						<input type="text" id="input_code" placeholder="请输入验证码">
+						
+						<img src="" id="gen_code">
+						<div class="info4"></div>
+					</div>
+					
+					
+					
+					<div class="form-5">
+						<label>
+							<input type="checkbox">我已阅读并同意 <a href="#">会员注册协议</a>
+						</label>
+					</div>
+					<div class="form-6">
+						<input type="submit" value="确认注册" id="sub_btn">
+					</div>
+				</form>
+			</div>
+			<div class="footer">
+				<p>经营许可证号：粤B2-20110318 粤ICP备10054276号
+
+					Copyright  2009-2017 百悦100yue.com 版权所有</p>
+				<img src="../img/images-denglu/2.gif"/>	
+			</div>
+		</div>
 	</body>
 </html>

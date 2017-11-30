@@ -1,0 +1,24 @@
+{
+  "name": "project-fuli",
+  "version": "1.0.0",
+  "description": "PC项目：\r \t技术：\r \t\tHTML + CSS\r \t\tJavaScript\r \t\tjQuery + plugins\r \t\tSass\r \t\tartTemplate\r \t\tRequireJs\r \t\tgulp\r \t\tgit\r \t\t...",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fuli11/h51708-PCFL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fuli11/h51708-PCFL/issues"
+  },
+  "homepage": "https://github.com/Fuli11/h51708-PCFL#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
