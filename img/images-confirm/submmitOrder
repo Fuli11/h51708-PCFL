@@ -1,0 +1,876 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="/utility/jquery-1.8.3.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+
+    <script language="javascript" type="text/javascript"> 
+            var skinPath = "/templates/pccommon";
+            var HasWapRight = true;
+            var IsOpenStores = false;
+            var IsOpenReferral = 1;
+            var HasVshopRight = true;
+            var ImageServerUrl="";
+  var ImageUploadPath="/admin/UploadHandler.ashx?action=newupload";
+        </script>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-language" content="zh-CN" />
+<link rel="icon" type="image/x-icon" href="http://www.100yue.com/Favicon.ico" media="screen" />
+<link rel="shortcut icon" type="image/x-icon" href="http://www.100yue.com/Favicon.ico" media="screen" />
+<meta name="author" content="Hishop development team" />
+<meta name="GENERATOR" content="3.3" />
+
+<script language='javascript' type='text/javascript'>
+$(document).ready(function(){
+$('embed').each(function () {
+            if (!$(this).attr('src')) {
+                $('embed').each(function () {
+                    if (!$(this).attr('src')) {
+                        $(this).attr('src', $(this).attr('data-url'));
+                        var newembed = $(this).clone();
+                        $(this).parent().append(newembed);
+                        $(this).remove();
+                    }
+                });
+
+                $('iframe').each(function () {
+                    if (!$(this).attr('src')) {
+                        $('iframe').each(function () {
+                            if (!$(this).attr('src')) {
+                                $(this).attr('src', $(this).attr('data-url'));
+                            }
+                        });
+                    }
+                });
+            }
+        });
+})            
+</script>
+
+
+    <title>百悦网</title>
+
+    <meta name="description" content="百悦（100yue.com）是一家专注于为国内消费者提供优质、优价进口商品的电商平台。 百悦对接全球优质渠道，直接向国际品牌产品供应商采购，以确保提供保真且丰富的产品线，把质优价廉的商品带给国内消费者。并支持信用卡分期及信用卡积分支付。" />
+<meta name="keywords" content="百悦 百悦网 信用卡分期 信用卡申请 香水 彩妆 进口商品" />
+
+    <script src="/Utility/icheck/icheck.min.js"></script>
+    <link rel="stylesheet" href="/Admin/css/bootstrap.min.css" rev="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/templates/pccommon/style/_all.css" />
+    <link rel="stylesheet" href="/templates/pccommon/style/style.css?v=3.0" type="text/css" media="" />
+    <link rel="stylesheet" href="/templates/master/default/style//menu.css?v=3.0" type="text/css" media="" />
+    <script src="/Utility/windows.js?v=3.0"></script>
+    <link href="/Admin/css/windows.css?v=3.0" rel="stylesheet" />
+
+</head>
+<body>
+    <style>
+        * {
+            box-sizing: content-box;
+        }
+
+        .main {
+            margin: 0 auto;
+            width: 1000px;
+            clear: both;
+            overflow: hidden;
+        }
+
+        .top .top-main {
+            width: 1000px;
+        }
+    </style>
+    <div id="header" class="top">
+        <div class="top-w">
+            <div class="top-main">
+                <div class="header_top1">
+                    <div class="fl">
+                        您好，13881044501&nbsp;&nbsp;&nbsp;&nbsp;为了您的账号安全，请设置交易密码，<a href='/User/OpenBalance.aspx' style='color:#0099FF'>去设置</a>
+                    </div>
+                    <div class="fr top1_r">
+                        <ul>
+                            <li>
+                                <a id="SubmmitOrder_ctl00___linkMyAccount" href="/logout">退出</a></li>
+                            <li id="liLinkLogin">
+                                <div class="dt cw-icon"><input type="hidden" id="hidIsLogin" value="1"/><em><a href="/User/UserDefault">个人中心</a><i><img src="/templates/master/default/images/jiantou_03.png"></i></em></div><div class="dorpdown-layer"><a href="/User/UserOrders">已买商品</a><a href="/User/Favorites">我的收藏</a></div></li>
+                            <li class="fore3">
+                                <div class="cw-icon"><em><a href="javascript:;">微信商城</a><i><img src="/templates/master/default/images/jiantou_03.png"></i></em></div><div class="dorpdown-layer"><img src="/Storage/master/QRCode/www.100yue.com_vshop.png" /></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $('.cart_chekout').click(function () {
+                $('.modal_qt').css('display', 'none');
+            })
+
+           
+			$('.dialog_title_r').click(function(){
+        		$('.login_tan').hide();
+        		$('.modal_qt').hide();
+        	})
+            var hidIsLogin = $("#hidIsLogin");
+            if (hidIsLogin.val() == "1") {
+                $("#liLinkLogin").addClass("fore3");
+            } else {
+                $("#liLinkLogin").removeClass("fore3");
+            }
+        }
+        )
+    </script>
+
+<script src="/Utility/common.js?v=3.0" type="text/javascript"></script>
+<script type="text/javascript" src="utility/validate/pagevalidator.js"></script>
+<script type="text/javascript" src="utility/submmitorder.helper.js?v=3.32"></script>
+<script type="text/javascript" src="/utility/jquery.form.js"></script>
+<script type="text/javascript" src="/utility/jquery.hishopUpload.user.js"></script>
+<script language="javascript" type="text/javascript">
+    function SetUseBalance(checked) {
+        if (checked == undefined || checked == null) {
+            checked = $('#chkIsUseBalance').is(':checked');
+        }
+        var useBalance = CalculateUseBalance(checked);
+        if (useBalance <= 0) {
+            //如果不需要支付则关闭
+            $("#chkIsUseBalance").iCheck("uncheck");
+            $("#hidUseBalance").val("0");
+            $("#spanUseBalance").html("0.00");
+        }
+        else {
+            $("#hidUseBalance").val(useBalance);
+            $("#spanUseBalance").html(useBalance);
+        }
+        CalculateTotalPrice();
+    }
+
+    function CalculateUseBalance(checked) {
+        if (!checked) {//如果未开启余额支付则不返回0
+            return 0;
+        }
+        var balanceAmount = parseFloat($("#hidBalanceAmount").val());
+        var useBalance = 0;
+        if (isNaN(balanceAmount)) { balanceAmount = 0; }
+        $("#hidUseBalance").val(0);
+        CalculateTotalPrice();
+        var total = parseFloat($("#SubmmitOrder_lblOrderTotal").html());
+        if (!isNaN(total) && total > 0) {
+            if (balanceAmount < total) {
+                useBalance = balanceAmount;
+            }
+            else {
+                useBalance = total;
+            }
+        }
+        else {
+
+            useBalance = 0;
+        }
+        return useBalance;
+
+    }
+    function InitValidators() {
+        initValid(new InputValidator('SubmmitOrder_txtShipTo', 2, 20, false, '[\u4e00-\u9fa5a-zA-Z]+[\u4e00-\u9fa5_a-zA-Z0-9]*', '名字不能为空，只能是汉字或字母开头，长度在2-20个字符之间'));
+        initValid(new InputValidator('SubmmitOrder_txtAddress', 3, 200, false, null, '详细地址不能为空,3-200个字符'));
+        initValid(new InputValidator('SubmmitOrder_txtTelPhone', 3, 20, true, '^[0-9-]*$', '电话号码长度限制在3-20个字符之间，只能输入数字和字符“-”'));
+        initValid(new InputValidator('SubmmitOrder_txtCellPhone', 3, 20, true, '^[0-9]*$', '收货人的手机号码,只能输入数字'));
+
+    }
+    $(document).ready(function () {
+        var Pro_width = $('.suits .product').size() * $('.suits .product').width();
+        var Pro_plus = $('.suits .plus').size() * $('.suits .plus').outerWidth(true);
+        var suits_width = Pro_width + Pro_plus;
+        $('.suits .info').css('width', suits_width)
+        var bg = "<div class='modal_qt'></div>";
+        javascript: window.history.forward(1);
+        //开启余额支付
+        $("#chkIsUseBalance").on('ifClicked', function (event) {
+            if ($("#hidOpenBalancePay").val().toLowerCase() == "false") {//如果未开启余额支付则关闭
+                $("#hidUseBalance").val("0.0");
+                $("#spanUseBalance").html("0.00");
+                $("#chkIsUseBalance").prop("checked", false);
+            }
+            else {
+                SetUseBalance(true);
+                if ($("#hidHasTradePassword").val() == "0") {
+                    $("#divSetPassword").show();
+                    $('body').append(bg);
+                }
+                else {
+                    if ($("#hidIsValidTradePassword").val() != "true")//如果未验证密码则提示输入密码
+                    {
+                        $(".sub_dialog").show();
+                        $('body').append(bg);
+                    }
+                }
+            }
+        });
+        //取消了余额支付
+        $("#chkIsUseBalance").on('ifUnchecked', function (event) {
+            $("#hidUseBalance").val("0.0");
+            $("#spanUseBalance").html("0.00");
+            CalculateTotalPrice();
+        });
+        
+        var balanceAmount = parseFloat($("#hidBalanceAmount").val());
+
+        if ($("#hidOpenBalancePay").val().toLowerCase() == "true" && (!isNaN(balanceAmount) && balanceAmount > 0)) {
+            $("#divUseBalancePay").show();
+        }
+        else {
+            $("#divUseBalancePay").hide();
+        }
+        $(".ap_content a").live("click", function (e) {
+            ChooiceRegion($(this).attr("id"), e);
+            var regionId = GetSelectedRegionId();
+            //ResetShipingModel(regionId);
+        });
+        $('.con em img').click(function () {
+            $('.mendian').css('display', 'none');
+            $('.zhezhao').css('display', 'none');
+        })
+
+        $('.addr-detail .name input').on('ifChecked', function (event) {
+            $('.addr-detail').removeClass('select');
+            $(this).parents('.addr-detail').addClass('select');
+        });
+        $('.skin-flat input').iCheck({
+            checkboxClass: 'icheckbox_flat-red',
+            radioClass: 'iradio_flat-red'
+        });
+
+        InitValidators();
+        var isPreSale = $("#hidIsPreSale").val();
+        if (isPreSale == "1") {
+            $("#normalOrder").hide();
+            $("#preSaleOrder").show();
+        }
+        else {
+            $("#normalOrder").show();
+            $("#preSaleOrder").hide();
+        }
+
+        //填写地址时
+        if ($("#addresslist .list").length <= 0) {
+            OpenNameVerify(null);
+        }
+
+        CalculationTax();
+    });
+
+</script>
+<style>
+    .noused { color: #aaa; cursor: no-drop; background: #fff none repeat scroll 0 0; border: 1px solid #e5e5e5; float: left; height: 28px; line-height: 28px; padding: 1px 25px; position: relative; }
+
+    .id_card { width: 670px; height: 440px; text-align: center; }
+
+        .id_card div { width: 310px; height: 210px; float: left; }
+
+            .id_card div.example { margin-left: 5px; }
+
+        .id_card img { width: 300px !important; height: 180px !important; }
+        .setpassword{height:240px;}
+        .sub_dialog{height:180px;}
+        .dialog_btn{width:150px;}
+        .txt{width:100%;display:block;}
+</style>
+<div class="login_tan setpassword" id="divSetPassword" style="display: none;">
+    <div class="dialog_title">
+        <div class="dialog_title_l"><span>请您设置交易密码</span></div>
+        <div class="dialog_title_r" id="setTradePassword_close"></div>
+    </div>
+    <div class="dialog_cartitem">
+        <input type="password" placeholder="请输入交易密码" id="txtTradePassword" class="login_tan_input1" />
+        <input type="password" placeholder="确认交易密码" id="txtTradePasswordAgain" class="login_tan_input2"/>
+        <div class="btnbar">
+            <input type="button" name="button" id="btnSetTradePassword" value="确 认 " class="login_tan_input3 dialog_btn sure-btn" />
+            <a href="javascript:void(0)" id="canclepay" class="cancle login_tan_input3 cancle-btn">取消</a>
+        </div>
+    </div>
+</div>
+<div class="login_tan sub_dialog" style="display: none;">
+    <div class="dialog_title">
+        <div class="dialog_title_l"><span>帐户余额支付开启</span></div>
+        <div class="dialog_title_r" id="tradePassword_close"></div>
+    </div>
+    <div class="dialog_cartitem">
+        <input type="password" placeholder="输入交易密码" id="textfieldpassword" class="login_tan_input1" >
+        <div class="btnbar">
+            <input type="button" name="button" id="advancepay" value="确 认 " class="login_tan_input3 dialog_btn" />
+            <input type="button" name="button" id="canclepay1" value="取 消 " class="cancle-btn-input dialog_btn"/>
+            <div class="txt" style="color:red;display:none" id="errormsg"></div>
+        </div>
+    </div>
+</div>
+<form name="aspnetForm" method="post" action="submmitOrder?productSku=1310_5394" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMzQyNzc1MDk5D2QWAmYPZBYCZg9kFgICAg9kFhwCBw8PFgIeB1Zpc2libGVoZGQCMA9kFgQCAQ9kFgJmD2QWAgIBDxYCHgtfIUl0ZW1Db3VudAIBFgJmD2QWCmYPFQMGc3RpdGxlBmlubGluZRXonJzlpo3nvo7lpobkuJPokKXlupdkAgEPFgIfAQIBFgJmD2QWDmYPFQEJMTMxMF81Mzk0ZAIBD2QWAmYPDxYCHghJbWFnZVVybAU/L1N0b3JhZ2UvbWFzdGVyL3Byb2R1Y3QvdGh1bWJzMTgwLzE4MF8yMDE3MTExODEzNTYzMzYwMzY3NTAuanBnZGQCBQ8WAh4EVGV4dAUY6aKc6Imy77ya6Jyc5qmY6ImyM+aUrzsgZAIHDxYCHwEC/////w9kAgkPDxYCHgVNb25leSgpW1N5c3RlbS5EZWNpbWFsLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkIMTA5LjAwMDBkZAILDxYCHwMFATFkAg0PDxYCHwQoKwQIMTA5LjAwMDBkZAICDxUBBmlubGluZWQCAw8PFgIfAwUJ77+lMTA5LjAwZGQCBQ8PFgYfAwUH77+lNi4wMB4IQ3NzQ2xhc3MFDHNwYW5GcmVpZ2h0Mh4EXyFTQgICZGQCAw8PFgIfAwUEMC4wMGRkAjoPFgIfAGgWAgIDDw8WAh8DBQEwZGQCPA8QFgYeDURhdGFUZXh0RmllbGQFCkNvdXBvbk5hbWUeDkRhdGFWYWx1ZUZpZWxkBQlDbGFpbUNvZGUeC18hRGF0YUJvdW5kZxAVAhLkuI3kvb/nlKjkvJjmg6DliLgZ5paw5Lq65YWo5Zy66YCa55So5Yi4MuWFgxUCATAkMmYwODM2MWEtM2RjYi00NTY0LWI2MWEtZGU0ZmRjMGYyYWVkFCsDAmdnZGQCPg8PFgIfBCgrBAgxMDkuMDAwMGRkAkQPDxYCHwMFBDIuMDBkZAJIDxYCHwBoZAJKDw8WAh8EKCsEATBkZAJODw8WAh8DBSM8bGFibGUgc3R5bGU9J2NvbG9yOnJlZCc+MCU8L2xhYmxlPmRkAlAPDxYCHwMFBDYuMDAWAh4HRnJlaWdodAUENi4wMGQCUg8PFgQfAwUa77yI6K6i5Y2V5ruhODjlhYPljIXpgq7vvIkeC05hdmlnYXRlVXJsBRIvRmF2b3VyYWJsZS9zaG93LzVkZAJcDw8WAh8DBQQwLjAwZGQCXg8PFgIfBCgrBAgxMDkuMDAwMGRkAmgPDxYCHwMFAjU0ZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgIFGVN1Ym1taXRPcmRlciRjaGtJc0RlZmF1bHQFG1N1Ym1taXRPcmRlciRjaGtJc1VzZVBvaW50cw==" />
+</div>
+
+    <div class="main">
+        <div class="cart_h">
+            <div id="logo">
+                <div class="logo cssEdite" type="logo" id="logo_1" >
+<a href="/">
+<img src="/utility/pics/201711031340299281370.png" />
+</a>
+</div>
+
+            </div>
+            <div class="cart_step">
+                <ul class="cart_step2">
+                    <li class="step-1"><b></b>1.我的购物车</li>
+                    <li class="step-2"><b></b>2.填写核对订单信息</li>
+                    <li class="step-3">3.成功提交订单</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cart_content">
+
+            <div class="OrderSubmit">
+                
+                <div class="cart_Order_deliver">
+                    <h3>请选择收货地址</h3>
+                </div>
+                
+                <div id="pannel_noaddress">
+	
+                    
+                    <div class="cart_Order_address" id="noaddressDiv" style="display:none;">
+                        <div class="address_have" id="addresslist">
+                            <div class="address_tab">
+
+                            </div>
+                            <div class="control">
+                                <a class="use_newAddr" id="btnaddaddress"><i>+</i>添加收货地址</a><a class="manageAddr" target="_blank"
+                                                                                               href="/user/UserShippingAddresses.aspx">管理收货地址</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                
+</div>
+                
+                
+                
+                
+                <div class="comon_submmitorder_address2">
+                    <input type="hidden" id="hdcopyshipping" value="SubmmitOrder_txtShipTo,SubmmitOrder_txtCellPhone,SubmmitOrder_txtTelPhone,SubmmitOrder_txtAddress" />
+                    
+
+<table id="tab_pasteaddress" style="display:none">
+<tr><td rowspan="3">粘贴收货人地址：</td>
+<td>请先选择您的代销网站类型，然后去网店复制下单用户的收货人地址，在下列大方框用"Ctrl+V"粘贴。</td>
+</tr>
+<tr><td>
+<input type="radio" name="radaddresstype" id="radtaobao" value="taobao" checked="checked"  onclick="return PasteAddress()"/>淘宝　　
+<input type="radio" name="radaddresstype" id="radpaipai" value="paipai" onclick="return PasteAddress()" />拍拍　　　
+</td></tr>
+<tr><td><textarea rows="5" cols="50" id="txtarea" onblur="return PasteAddress()"></textarea></td></tr>
+</table>
+
+<script>
+    function PasteAddress() {
+        if ($("#hdcopyshipping").val().replace(/\s/g, "") == null || $("#hdcopyshipping").val().replace(/\s/g, "") == "undefined" || $("#hdcopyshipping").val().replace(/\s/g, "") == "") {
+            alert("指定参数无效！");
+            return false;
+        }
+
+        if ($("#hdcopyshipping").val().replace(/\s/g, "").split(',') != null && $("#hdcopyshipping").val().replace(/\s/g, "").split(',').length != 5) {
+            alert("指定参数长度有误！");
+            return false;
+        }
+
+        var shippingaddress = $("#hdcopyshipping").val().replace(/\s/g, "").split(',');
+
+        var pastetype = "";
+        $("#tab_pasteaddress input[type='radio']").each(function () {
+            if ($(this).attr("checked")) {
+                pastetype = $(this).val();
+            }
+        });
+        var pastecontent = $("#txtarea").val();
+        var shipto = ""; //收货人
+        var regioncity = ""; //城市
+        var regionpro = ""; //省份
+        var regionarea = ""; //区
+        var ship_region_addr;
+        if (pastecontent != null && pastecontent != "" && pastecontent != "undefined") {
+            switch (pastetype) {
+                case "taobao":
+                    ship_info_arr = pastecontent.split('，');
+                    var index = 0;
+                    if (ship_info_arr[index]) { $("#" + shippingaddress[0]).val(ship_info_arr[index]); $("#" + shippingaddress[0]).focus(); index++; }
+                    if (ship_info_arr[index].indexOf('-') == -1) { $("#" + shippingaddress[1]).val(ship_info_arr[index]); index++; }
+                    if (ship_info_arr[index].indexOf(' ') == -1) { $("#" + shippingaddress[2]).val(ship_info_arr[index]); index++; }
+                    if (ship_info_arr[index]) { ship_region_addr = ship_info_arr[index].split(' '); index++; }
+                    if (ship_info_arr[index]) { $("#" + shippingaddress[3]).val(ship_info_arr[index]); $("#" + shippingaddress[4]).focus(); }
+                    if (ship_region_addr != null && ship_region_addr != "undefined" && ship_region_addr.length >= 3) {
+                        if (ship_region_addr[0]) regionpro = ship_region_addr[0];
+                        if (ship_region_addr[1]) regioncity = ship_region_addr[1];
+                        if (ship_region_addr[2]) regionarea = ship_region_addr[2];
+                        if (ship_region_addr[3]) $("#" + shippingaddress[4]).val(ship_region_addr[3]);
+                        for (var i = 4; i < ship_region_addr.length - 1; i++) {
+                            $("#" + shippingaddress[4]).val($("#" + shippingaddress[4]).val() + " " + ship_region_addr[i]);
+                        }
+                    }
+                    break;
+                case "paipai":
+                    ship_info_arr = pastecontent.split(' ，');
+                    if (ship_info_arr[0]) $("#" + shippingaddress[0]).val(ship_info_arr[0]);
+                    if (ship_info_arr[1]) {
+                        if (ship_info_arr[1].split('，')[0] && ship_info_arr[1].split('，')[0]) $("#" + shippingaddress[2]).val(ship_info_arr[1].split('，')[0]);
+                        ship_region_addr = ship_info_arr[1].split('，')[1].split(' ');
+                    }
+                    if (ship_info_arr[2]) $("#" + shippingaddress[3]).val(ship_info_arr[2]);
+                    if (ship_region_addr != null && ship_region_addr != "undefined" && ship_region_addr.length >= 3) {
+                        if (ship_region_addr[0]) regionpro = ship_region_addr[0] + "省";
+                        if (ship_region_addr[1]) regioncity = ship_region_addr[1];
+                        if (ship_region_addr[2]) regionarea = ship_region_addr[2];
+                        if (ship_region_addr[3]) $("#" + shippingaddress[4]).val(ship_region_addr[3]);
+                        for (var i = 4; i < ship_region_addr.length; i++) {
+                            $("#" + shippingaddress[4]).val($("#" + shippingaddress[4]).val() + " " + ship_region_addr[i]);
+                        }
+                    }
+                    break;
+                default:
+                    break;
+            };
+            $.ajax({
+                url: "/Handler/SubmmitOrderHandler.ashx",
+                type: 'post', dataType: 'json', timeout: 10000,
+                data: { Action: "GetRegionId", Prov: regionpro, City: regioncity, Areas: regionarea },
+                async: false,
+                success: function (resultData) {
+                    if (resultData.Status == "OK") {
+                        ResetSelectedRegion(resultData.RegionId);
+                        CalculateFreight(resultData.RegionId);
+                    }
+                    else {
+                        alert("收货地址粘贴格式错误，请重试!");
+                    }
+                }
+            });
+        }
+
+    }
+</script>
+                </div>
+                <div class="cart_Order_address" id="user_shippingaddress" style="display: none;">
+                    <div class="con">
+                        <div class="title">
+                            <h2 id="tr_addresstitle">填写收货地址</h2>
+                            <em>
+                                <img id="imgCloseLogin" class="imgCloseLogin" src="/templates/pccommon/images/new/close_btn.png" width="12" height="12" /></em>
+                        </div>
+
+                        <ul>
+                            <li>
+                                <h2><em>*</em>收货人：</h2>
+                                <input name="SubmmitOrder$txtShipTo" type="text" id="SubmmitOrder_txtShipTo" class="textform form-control" />
+                                <span id="SubmmitOrder_txtShipToTip"></span>
+                            </li>
+                            <li>
+                                <h2><em>*</em>收货地址：</h2>
+                                <span id="SubmmitOrder_dropRegions"><div class="address_wap"><div class="dp_border"></div><div class="dp_address"><a id="province_top" href="javascript:" class="dropdown_box"><span id="provincename" class="dropdown_selected">请选择省</span><span class="dropdown_button"></span></a><a id="city_top" href="javascript:" class="dropdown_box"><span id="cityname" class="dropdown_selected">市：</span><span class="dropdown_button"></span></a><a id="area_top" href="javascript:" class="dropdown_box"><span id="areaname" class="dropdown_selected">区/县：</span><span class="dropdown_button"></span></a><a id="street_top" href="javascript:" class="dropdown_box"><span id="streetname" class="dropdown_selected">街道</span><span class="dropdown_button"></span></a></div><div class="ap_content ap_province dp_address" id="province_floor">
+	<div class="dp_address_list province clearfix" id="province_info"> <ul id="province_select"><li><a href="javascript:;" id="select_new_province_100">浙江省</a></li><li><a href="javascript:;" id="select_new_province_213">上海</a></li><li><a href="javascript:;" id="select_new_province_236">江苏省</a></li><li><a href="javascript:;" id="select_new_province_374">安徽省</a></li><li><a href="javascript:;" id="select_new_province_516">江西省</a></li><li><a href="javascript:;" id="select_new_province_642">北京</a></li><li><a href="javascript:;" id="select_new_province_663">天津</a></li><li><a href="javascript:;" id="select_new_province_684">河北省</a></li><li><a href="javascript:;" id="select_new_province_883">山西省</a></li><li><a href="javascript:;" id="select_new_province_1026">内蒙古自治区</a></li><li><a href="javascript:;" id="select_new_province_1152">山东省</a></li><li><a href="javascript:;" id="select_new_province_1332">河南省</a></li><li><a href="javascript:;" id="select_new_province_1529">湖北省</a></li><li><a href="javascript:;" id="select_new_province_1662">湖南省</a></li><li><a href="javascript:;" id="select_new_province_1813">海南省</a></li><li><a href="javascript:;" id="select_new_province_1840">福建省</a></li><li><a href="javascript:;" id="select_new_province_1944">广东省</a></li><li><a href="javascript:;" id="select_new_province_2111">广西壮族自治区</a></li><li><a href="javascript:;" id="select_new_province_2249">辽宁省</a></li><li><a href="javascript:;" id="select_new_province_2384">吉林省</a></li><li><a href="javascript:;" id="select_new_province_2467">黑龙江省</a></li><li><a href="javascript:;" id="select_new_province_2625">新疆维吾尔自治区</a></li><li><a href="javascript:;" id="select_new_province_2753">陕西省</a></li><li><a href="javascript:;" id="select_new_province_2881">甘肃省</a></li><li><a href="javascript:;" id="select_new_province_2995">青海省</a></li><li><a href="javascript:;" id="select_new_province_3055">宁夏回族自治区</a></li><li><a href="javascript:;" id="select_new_province_3087">重庆</a></li><li><a href="javascript:;" id="select_new_province_3130">四川省</a></li><li><a href="javascript:;" id="select_new_province_3356">贵州省</a></li><li><a href="javascript:;" id="select_new_province_3464">云南省</a></li><li><a href="javascript:;" id="select_new_province_3626">西藏自治区</a></li><li><a href="javascript:;" id="select_new_province_3714">台湾省</a></li><li><a href="javascript:;" id="select_new_province_3795">香港特别行政区</a></li><li><a href="javascript:;" id="select_new_province_3799">澳门特别行政区</a></li><li><a href="javascript:;" id="select_new_province_3802">海外</a></li><li><a href="javascript:;" t="clear" id="select_new_province_0">[清空]</a></li></ul></div>
+</div><div class="ap_content ap_city dp_address" id="city_floor">
+	<div class="dp_address_list city clearfix" id="city_info"> <ul id="city_select"><li><a href="javascript:;" t="clear" id="select_new_city_clear" >[清空]</a></li></ul></div>
+</div><div class="ap_content ap_area dp_address" id="area_floor">
+	<div class="dp_address_list area clearfix" id="area_info"> <ul id="area_select"><li><a href="javascript:;" t="clear" id="select_new_area_clear" >[清空]</a></li></ul></div>
+</div><div class="ap_content ap_street dp_address" id="street_floor">
+	<div class="dp_address_list street clearfix" id="street_info"> <ul id="street_select"><li><a href="javascript:;" t="clear" id="select_new_street_clear" >[清空]</a></li></ul></div>
+</div></div><style type="text/css">.dropdown_button {background: url('/WebResource.axd?d=YsFXf5SrCKH1-7wng97EEGSVYAlEG3vyUHnmLqz7ztFuSTRBEMPUUjbjQqOyGOs33PFwhSz8VJnlFEPpQCgcohrND3kW9R2lZqWJI0eQskU1&t=636474835077435642') no-repeat;}
+.dp_address a:hover .dropdown_button {background: url('/WebResource.axd?d=YsFXf5SrCKH1-7wng97EEGSVYAlEG3vyUHnmLqz7ztFuSTRBEMPUUjbjQqOyGOs33PFwhSz8VJnlFEPpQCgcohrND3kW9R2lXJA9hX1hyuFJ8ZfxQFaUSg2&t=636474835077435642') no-repeat;}
+</style>
+<link id="SubmmitOrder_regionStyle" rel="stylesheet" href="/WebResource.axd?d=YsFXf5SrCKH1-7wng97EEGSVYAlEG3vyUHnmLqz7ztFuSTRBEMPUUjbjQqOyGOs33PFwhSz8VJltmJ1CCvminjePX__eVaJO0&amp;t=636474835077435642" type="text/css" media="screen" /></span><input id="regionSelectorValue" name="regionSelectorValue" value="0" type="hidden" depth="0" /><input id="regionIsShift" name="regionIsShift" value="false" type="hidden" /><input id="regionSelectorName" name="regionSelectorName" value="" type="hidden" /><input id="regionSelectorNull" name="regionSelectorNull" value="-请选择-" type="hidden" /><input id="regionDisplayStreet" name="regionDisplayStreet" value="true" type="hidden" />
+                                <script src="/Utility/SubmitOrderRegion.Helper.js" type="text/javascript"></script>
+                            </li>
+                            <li>
+                                <h2><em>*</em>详细地址：</h2>
+                                <input name="SubmmitOrder$txtAddress" type="text" id="SubmmitOrder_txtAddress" class="textform form-control" style="width:400px;" /><span id="SubmmitOrder_txtAddressTip"></span>
+                            </li>
+                            <li style="display: none;">
+                                <h2>邮政编码：</h2>
+                                <input name="SubmmitOrder$txtZipcode" type="text" id="SubmmitOrder_txtZipcode" class="textform form-control" />
+                                
+                            </li>
+                            <li>
+                                <h2>电话号码：</h2>
+                                <input name="SubmmitOrder$txtTelPhone" type="text" id="SubmmitOrder_txtTelPhone" class="textform form-control" />
+                                
+                                <span id="SubmmitOrder_txtTelPhoneTip"></span>
+                            </li>
+                            <li>
+                                <h2><em>*</em>手机号码：</h2>
+                                <input name="SubmmitOrder$txtCellPhone" type="text" value="13881044501" id="SubmmitOrder_txtCellPhone" class="textform form-control" />
+                                
+                                <span id="SubmmitOrder_txtCellPhoneTip"></span>
+                            </li>
+                            <li id="setDefaultRow">
+                                <h2>&nbsp;</h2>
+                                <input name="SubmmitOrder$chkIsDefault" type="checkbox" id="chkIsDefault" style="-webkit-appearance: checkbox; width: 16px; height: 16px;" />设为默认
+                            </li>
+                            <li id="btnaddr">
+                                <a class="save" onclick="return AddShippAddress()">保存</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cart_Order_address" id="OpenCertification" style="display: none">
+                    <div class="con">
+                        <div>
+                            <h3>实名验证</h3>
+                        </div>
+                        <ul>
+                            <li id="trShipTo">
+                                <h2>真实姓名：</h2>
+                                <span id="SubmmitOrder_lblShipTo" style="height: 28px; line-height: 28px; display: block"></span>
+                            </li>
+                            <li>
+                                <h2><em>*</em>身份证号：</h2>
+                                <input name="SubmmitOrder$txtIDNumber" type="text" id="SubmmitOrder_txtIDNumber" class="textform form-control" value="" />
+                                <span id="SubmmitOrder_text20"></span>
+                            </li>
+                            <li class="id_card" style="display: none;">
+                                <div id="IDJust">
+                                    <span name="siteLogo" class="imgbox"></span>
+                                    <input type="hidden" name="SubmmitOrder$fieldIDCardJust" id="fieldIDCardJust" value="/templates/pccommon/images/users/upload_ID_Just.jpg" />
+                                    
+                                    <img id="idCardJustImg" src="" style="border-width:0px;display: none;" />
+                                    
+                                </div>
+                                <div id="IDAnti">
+                                    <span name="siteLogo" class="imgbox"></span>
+                                    <input type="hidden" name="SubmmitOrder$fieldIDCardAnti" id="fieldIDCardAnti" value="/templates/pccommon/images/users/upload_ID_Anti.jpg" />
+                                    
+                                    <img id="idCardAntiImg" src="" style="border-width:0px;display: none;" />
+                                    
+                                </div>
+                                <div class="example">
+                                    <lable>示例</lable>
+                                    <img src="../templates/pccommon/images/users/ID_card_Just.jpg" alt="示例正面" />
+                                </div>
+                                <div class="example">
+                                    <lable>示例</lable>
+                                    <img src="../templates/pccommon/images/users/ID_card_Anti.jpg" alt="示例反面" />
+                                </div>
+                            </li>
+                            <li class="Certification2" style="display: none;">
+                                <em>
+                                    <samp style="color: red"></samp>
+                                    注：
+                                </em>
+                                <span>1、需上传正反面2张身份证照片</span><br />
+                                <span style="margin-left: 36px;">2、每张照片不能超过5M，图片格式为JPG，JPEG，PNG</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 配送方式/送货时间-->
+                <div class="cart_Order_deliver">
+                    <div class="title">
+                        <h3>配送方式/送货时间</h3>
+                    </div>
+                    <div class="step">
+                        <div class="deliver_way">
+                            <h2>配送方式 :</h2>
+                            <ul>
+                                <li>
+                                    <div class="item"><b></b>快递配送</div>
+                                </li>
+                                <li style="margin-right: 0px; display: none">
+                                    <div class="ziti"><b></b>上门自提</div>
+                                    <div class="ziti_con"></div>
+                                    <div class="ziti_btn"><a href="javascript:;">&nbsp;选择自提门店</a></div>
+                                </li>
+                            </ul>
+
+                            <div id="divGetGoodsRemark" style="width: 100%; height: 24px; clear: both;">
+                            </div>
+
+
+                            <!-- 自提弹窗静态-->
+                            <div class="mendian cart_Order_address2">
+                                <div class="con">
+                                    <div class="title">
+                                        <h2 id="tr_addresstitle">修改自提门店</h2>
+                                        <em>
+                                            <img id="imgCloseLogin" src="/templates/pccommon/images/new/close_btn.png" width="12" height="12" /></em>
+                                    </div>
+                                    <div class="info">
+                                        <div class="info1">
+                                            <h2>区域：</h2>
+                                            <span>
+                                                <select>
+                                                    <option value="">全部区域</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Order_deliver_time">
+                            <h2>送货时间 :</h2>
+                            <select name="SubmmitOrder$drpShipToDate" id="SubmmitOrder_drpShipToDate">
+	<option value="时间不限">时间不限</option>
+	<option value="周一至周五">周一至周五</option>
+	<option value="周六日及公众假期">周六日及公众假期</option>
+</select>
+                        </div>
+                    </div>
+                </div>
+                <!-- end -->
+            </div>
+        </div>
+        <!-- 支付方式静态-->
+        <div class="cart_Order_deliver payment_way">
+            <div class="title">
+                <h3>支付方式</h3>
+            </div>
+            <div class="step">
+                <ul>
+                    <li style="display: none;">
+                        <div class="zhifu"><b></b>在线支付</div>
+                    </li>
+                    <li style="display: none;">
+                        <div class="zhifu"><b></b>货到付款</div>
+                    </li>
+                    <li style="display: none;">
+                        <div class="zhifu"><b></b>到店支付</div>
+                    </li>
+                    <li style="display: none;">
+                        <div class="zhifu"><b></b>线下付款</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cart_Order_info">
+            <div id="divProductList">
+                <h3>商品清单<a href="/ShoppingCart.aspx" class="return" id="backToShoppingCart">返回改购物车</a></h3>
+                <div class="cart_Order_info2">
+                    
+<div class="list">
+    <div class="title">
+        <div class="name"><em>商品</em></div>
+        <div class="price">单价</div>
+        <div class="num">数量</div>
+        <div class="total">小计</div>
+    </div>
+    
+            <div class="stitle" style='display: inline'>蜜妍美妆专营店</div>
+            
+                    <div class="con skuid_1310_5394">
+                        <div class="name">
+                            <div class="pic">
+                                <a id="SubmmitOrder_Common_SubmmintOrder_ProductList___dataSupplier_ctl00_dataListShoppingCrat_ctl00_ProductDetailsLink2" href="/product_detail/1310" target="_blank"><img id="SubmmitOrder_Common_SubmmintOrder_ProductList___dataSupplier_ctl00_dataListShoppingCrat_ctl00_ListImage1" src="/Storage/master/product/thumbs180/180_201711181356336036750.jpg" style="width:80px;border-width:0px;" /></a>
+                            </div>
+                            <div class="item-msg">
+                                <a id="SubmmitOrder_Common_SubmmintOrder_ProductList___dataSupplier_ctl00_dataListShoppingCrat_ctl00_ProductDetailsLink1" href="/product_detail/1310" target="_blank">Moodmatcher魔幻变色口红单色3.5g*3支</a>
+                                <div class="p-extend">
+                                    颜色：蜜橘色3支; 
+                                </div>
+                                <div class="gift_list">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <span>￥<span id="SubmmitOrder_Common_SubmmintOrder_ProductList___dataSupplier_ctl00_dataListShoppingCrat_ctl00_FormatedMoneyLabel1">109.00</span></span>
+                        </div>
+                        <div class="num">
+                            1
+                        </div>
+                        <div class="total">
+                            <span>￥<span id="SubmmitOrder_Common_SubmmintOrder_ProductList___dataSupplier_ctl00_dataListShoppingCrat_ctl00_FormatedMoneyLabel2">109.00</span></span>
+                        </div>
+                    </div>
+                
+            <div class="h_1" style='display: inline'>
+                <div>小计：<span id="SubmmitOrder_Common_SubmmintOrder_ProductList___dataSupplier_ctl00_lblSupplierAmount">￥109.00</span></div>
+                <div>运费：<span id="lblFreight" class="spanFreight2">￥6.00</span></div>
+            </div>
+        
+</div>
+
+
+
+                    <div class="cart_Weight" style="display: none;">
+                        <strong>货物总重量（含礼品）：</strong><span style="color: Green; font-weight: 700;"><span id="SubmmitOrder_litAllWeight">0.00</span></span>
+                        克
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="h_1" style='text-align: right; display: # Hidistro.Context.HiContext.Current.SiteSettings.OpenSupplier?"inline":"none"'>
+                <span id="SubmmitOrder_lblGiftFeright"></span>
+            </div>
+            <div class="cart_Order_info3">
+                <div class="cart_Order_coupon3">
+                    <div class="fl">
+                        
+                        <div class="list">
+                            <em>留言：</em>
+                            <span><input name="SubmmitOrder$txtMessage" type="text" id="SubmmitOrder_txtMessage" style="width:300px;" />
+                            </span>
+                        </div>
+                        
+                    </div>
+                    <div class="fr" id="selectCoupon">
+                        <div class="list">
+                            <em>优惠券：</em>
+                            <span>
+
+                                <link href="/templates/pccommon/style/easyui.css" rel="stylesheet" />
+                                <script type="text/javascript" src="/utility/jquery.easyui.min.js"></script>
+                                <select name="SubmmitOrder$CmbCoupCode" id="SubmmitOrder_CmbCoupCode" class="easyui-combobox" required="" style="width: 240px;">
+	<option value="0">不使用优惠券</option>
+	<option selected="selected" value="2f08361a-3dcb-4564-b61a-de4fdc0f2aed">新人全场通用券2元</option>
+</select>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="list fr">
+                        <em>商品合计：</em>
+                        <b>￥<span id="SubmmitOrder_lblTotalPrice">109.00</span>&nbsp;</b>
+
+                        <div style="display: none;">
+                            <a id="SubmmitOrder_hlkReducedPromotion" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart_Order_total">
+
+                <div class="list" id="divCoupons"><em>-￥<span id="SubmmitOrder_litCouponAmout">2.00</span></em><b>优惠券：</b></div>
+                <div class="list" id="divPromtion"><em>- ￥<span id="SubmmitOrder_lblDeductibleMoney">0.00</span></em><b>满减：</b> </div>
+                <div class="list" id="divTaxRate" style="display: none;">
+                    <em>
+                    </em>
+                    <b>税费：</b>
+                </div>
+                <div class="list" id="divCrossTax">
+                    <em>
+                        ￥<span id="SubmmitOrder_lblCrossTax">0.00</span>
+                        <a id="SubmmitOrder_hlkCrossTax" target="_blank" style="display: none;"></a>
+                    </em>
+                    <b>跨境税率(<span id="SubmmitOrder_litCrossTaxRate"><lable style='color:red'>0%</lable></span>)：</b>
+                </div>
+                <div class="list" id="divFreight">
+                    <em>￥<span id="SubmmitOrder_lblShippModePrice" Freight="6.00">6.00</span>
+                        <a id="SubmmitOrder_hlkFeeFreight" href="/Favourable/show/5" target="_blank" style="display: none;">（订单满88元包邮）</a>
+                    </em>
+                    <b>运费：</b>
+                </div>
+                <div class="list" id="divPoint">
+                    <div class="usepoint skin-flat">
+                        <input name="SubmmitOrder$chkIsUsePoints" type="checkbox" id="chkIsUsePoints" />
+                        使用商城积分(<span id="SubmmitOrder_lblMaxPoints"></span>分可用)&nbsp;<input name="SubmmitOrder$txtUsePoints" type="text" maxlength="8" id="SubmmitOrder_txtUsePoints" class="cart_invoice" onchange="onPointChange(this)" />
+                        <span class="pointamount">-￥<span id="SubmmitOrder_litPointAmount">0.00</span></span>
+                    </div>
+                </div>
+                <div class="item-list" id="divUseBalancePay">
+                    <div class="skin-flat">
+                        <input class="weui_switch" type="checkbox" id="chkIsUseBalance" />
+                        余额抵扣(可用余额&yen;<span id="lblBalance">0.00</span>)&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="pointamount">-&yen;<span id="spanUseBalance">0</span></span>
+
+</div>
+                </div>
+                <div class="list" id="normalOrder">
+                    <div class="total"><em>￥<span id="SubmmitOrder_lblOrderTotal">109.00</span></em><b>订单实付：</b></div>
+                </div>
+                <div class="list" id="preSaleOrder">
+                    <div><em>￥<span id="SubmmitOrder_lblDeposit">-</span></em><b>定金：</b></div>
+                    <div><em>￥<span id="SubmmitOrder_lblFinalPayment">-</span></em><b>尾款(含运费和优惠)：</b></div>
+                    <div><em>￥<span id="SubmmitOrder_lblPreSaleOrderTotal">-</span></em><b>订单总计：</b></div>
+                    <div class="total"><em>￥<span id="SubmmitOrder_lblDepositPay">-</span></em><b>定金实付：</b></div>
+                </div>
+                <div class="list" id="divGetPoints">
+                    <div class="pointtotal">
+                        可得积分
+                        <span id="litPoint">54</span><br />
+                        <a id="SubmmitOrder_hlkSentTimesPoint" target="_blank" style="display: none;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="cart_Order_submit2">
+        <input type="submit" name="SubmmitOrder$btnCreateOrder" value="提交订单" id="SubmmitOrder_btnCreateOrder" />
+    </div>
+    </div>
+
+    <div class="zhezhao"></div>
+
+    <!--所有的隐藏域-->
+    <input name="SubmmitOrder$htmlCouponCode" type="hidden" id="SubmmitOrder_htmlCouponCode" value="2f08361a-3dcb-4564-b61a-de4fdc0f2aed" />
+    <input name="SubmmitOrder$inputPaymentModeId" type="hidden" id="SubmmitOrder_inputPaymentModeId" />
+    <input name="SubmmitOrder$inputShippingModeId" type="hidden" id="SubmmitOrder_inputShippingModeId" />
+    <input name="SubmmitOrder$hdbuytype" type="hidden" id="SubmmitOrder_hdbuytype" />
+    <input name="SubmmitOrder$hidStoreId" type="hidden" id="SubmmitOrder_hidStoreId" />
+    <input name="SubmmitOrder$hidStoreCount" type="hidden" id="SubmmitOrder_hidStoreCount" />
+    <input name="SubmmitOrder$hidShipperId" type="hidden" id="SubmmitOrder_hidShipperId" />
+    <input type="hidden" id="hidAllStores" />
+    <input name="SubmmitOrder$hidIsAnonymous" type="hidden" id="SubmmitOrder_hidIsAnonymous" value="0" />
+    <input name="SubmmitOrder$hidShoppingDeduction" type="hidden" id="SubmmitOrder_hidShoppingDeduction" />
+    <input name="SubmmitOrder$hidShoppingDeductionRatio" type="hidden" id="SubmmitOrder_hidShoppingDeductionRatio" />
+    <input name="SubmmitOrder$hidCanPointUseWithCoupon" type="hidden" id="SubmmitOrder_hidCanPointUseWithCoupon" value="False" />
+    <input name="SubmmitOrder$hidMyPoints" type="hidden" id="SubmmitOrder_hidMyPoints" />
+
+    <input name="SubmmitOrder$hidCanUsePoint" type="hidden" id="hidCanUsePoint" value="false" /><!--是否可以使用积分-->
+    <input name="SubmmitOrder$hidGetgoodsOnStores" type="hidden" id="hidGetgoodsOnStores" value="false" /><!--是否可以上门自提-->
+    <input name="SubmmitOrder$hidPaymentId_Podrequest" type="hidden" id="hidPaymentId_Podrequest" value="0" /><!--货到付款支付ID-->
+    <input name="SubmmitOrder$hidPaymentId_Offline" type="hidden" id="hidPaymentId_Offline" value="0" /><!--货到付款支付ID-->
+    <input name="SubmmitOrder$hidTotalPrice" type="hidden" id="hidTotalPrice" value="109.0000" /><!--商品总金额减去促销金额后的金额-->
+    <input name="SubmmitOrder$hidIsPreSale" type="hidden" id="hidIsPreSale" value="0" />
+    <!--是否预售-->
+    <input name="SubmmitOrder$hidOnlinePayCount" type="hidden" id="hidOnlinePayCount" value="2" /><!--在线支付方式总数，等于0时不显示在线支付方式-->
+    <input name="SubmmitOrder$hidPointRate" type="hidden" id="hidPointRate" value="2.00" /><!--积分兑换率-->
+    <input name="SubmmitOrder$hidHasSupplierProduct" type="hidden" id="hidHasSupplierProduct" value="1" /><!--是否有供应商商品-->
+    <input name="SubmmitOrder$hidTimePoint" type="hidden" id="hidTimePoint" value="1" /><!--赠送积分倍数-->
+    <input name="SubmmitOrder$hidIsGiftOrder" type="hidden" id="hidIsGiftOrder" value="0" /><!--是否礼品订单-->
+    <input name="SubmmitOrder$hidIsCloseStoreButGetGoods" type="hidden" id="hidIsCloseStoreButGetGoods" value="false" /><!--是否关闭多门店但可自提-->
+    <input name="SubmmitOrder$hidGetGoodsRemark" type="hidden" id="hidGetGoodsRemark" value="0" /><!--自提备注-->
+
+    <input name="SubmmitOrder$hidIsOpenCertification" type="hidden" id="hidIsOpenCertification" value="1" /><!--是否开启实名验证-->
+    <input name="SubmmitOrder$hidIsGetIDInfo" type="hidden" id="hidIsGetIDInfo" /><!--获取验证方式-->
+    <input name="SubmmitOrder$hidCertificationModel" type="hidden" id="hidCertificationModel" value="1" /><!--实名验证模式-->
+    <input name="SubmmitOrder$hididCardJustImg" type="hidden" id="hididCardJustImg" /><!--隐藏图片-->
+    <input name="SubmmitOrder$hididCardAntiImg" type="hidden" id="hididCardAntiImg" /><!--隐藏图片-->
+    <input name="SubmmitOrder$hidBalanceAmount" type="hidden" id="hidBalanceAmount" value="0.00" /><!-- 帐号余额 -->
+    <input name="SubmmitOrder$hidUseBalance" type="text" id="hidUseBalance" value="0" style="display:none" /><!--使用的余额-->
+    <input name="SubmmitOrder$hidTradePassword" type="text" id="hidTradePassword" value="" style="display:none" /><!--使用的余额-->
+    <input type="hidden" id="hidIsValidTradePassword" value="false" />
+    <input name="SubmmitOrder$hidOpenBalancePay" type="hidden" id="hidOpenBalancePay" value="false" />
+    <input name="SubmmitOrder$hidHasTradePassword" type="hidden" id="hidHasTradePassword" value="0" /><!-- 是否有交易密码 -->
+    <!--结束-->
+</form>
+		
+<div class="footer" id="footer">
+<div  class="footer_custom">
+  <div>  
+    <p style="text-align: center; line-height: normal;"><span style="color: rgb(242, 242, 242); height:30px">经营许可证号：粤B2-20110318 粤ICP备10054276号</span></p><p style="text-align: center; line-height: normal;"><span style="color: rgb(242, 242, 242); height:30px">Copyright &nbsp;2009-2017 百悦100yue.com 版权所有</span></p>
+    </div>
+  <div>
+     <script src='https://pw.cnzz.com/c.php?id=1264414779&l=2' language='JavaScript' charset='gb2312'></script>
+ </div>
+</div>
+
+</div>
+
+
+
+

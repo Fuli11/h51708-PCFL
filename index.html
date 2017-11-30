@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="lib/requirejs/require.js" data-main="/js/index"></script>
+</head>
+<body>
+	<div class="header"></div>
+	<div class="main">
+		
+	</div>
+	<div class="footer"></div>
+
+	<script type="text/html" id="floor_template">
+		{{each floors as floor}}
+		<div class="floor" style="width: 1000px; height:500px;">
+			<h1>{{floor.title}}</h1>
+			<div>商品：</div>
+			{{each floor.products as product}}
+				<div class="id">编号：{{product.id}}</div>
+				<div class="img">图片：{{product.img}}</div>
+				<div class="title">标题：{{product.title}}</div>
+				<div class="price">价格：{{product.price}}</div>
+			{{/each}}
+		</div>
+		{{/each}}
+	</script>
+</body>
+</html>
