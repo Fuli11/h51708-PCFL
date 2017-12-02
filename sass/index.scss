@@ -1,0 +1,253 @@
+*{margin: 0;padding: 0;}
+.main{
+    
+    .banner{
+    width: 1262px;
+    height: 400px;
+    position: relative;
+    background: red;
+    margin: 0 auto;
+    .banner-1{
+        width: 1262px;
+        height: 400px;
+        background: red;
+        position: relative;
+        
+    }
+    .banner-2{
+        background: #fefefe;
+        width: 200px;
+        height: 400px;
+        position: absolute;
+        top:0;
+        left:40px;
+        li{
+            width: 160px;
+            height: 40px;
+            line-height: 40px;
+            padding:0 20px;
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: black;
+                font-size: 14px;
+            }
+            a:hover{
+                color: white;
+                
+            }
+            >span{
+               float: right;
+               color: #e9e9e9; 
+            }
+        }
+        li:hover{
+            background: #d22147;
+        }
+    }
+    .banner-3{
+        width: 200px;
+        height: 380px;
+        background: white;
+        border: 10px solid #949494;
+        position: absolute;
+        top: 0px;
+        right:40px;
+        .banner-3-top{
+            width: 84px;
+            height: 30px;
+            background: url("../img/images-index/gongao_bg.png") no-repeat center center;
+            font-size: 14px;
+            color: white;
+            line-height: 30px;
+            position: absolute;
+            top: -4px;
+            left: 20px;
+            text-align: center;
+        
+        }
+        .banner-3-middle{
+            margin-top: 38px;
+            list-style: none;
+            line-height: 28px;
+            font-size: 12px;
+            padding-left: 20px;
+            height: 160px;
+            border-bottom: 1px solid #E6E6E6;
+            li {
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+                a:hover{
+                    color: orangered;
+                }
+            }
+        }
+        
+    }
+ }
+    .small-banner{
+        width: 1222px;
+        height: 180px;
+        padding-left: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background: #f3f3f3;
+        margin: 0 auto;
+        .s_banner{
+            width: 280px;
+            height: 180px;
+            float: left;
+            padding-right: 20px;
+        }
+    }
+    .gou{
+        width: 1182px;
+        height: 386px;
+        padding: 0 40px;
+        background: #f3f3f3;
+        .gou-left{
+            width: 900px;
+            height: 350px;
+            padding: 0 20px;
+            padding-top: 16px;
+            background: white;
+            float: left;
+            >p{
+                height: 24px;
+                line-height: 24px;
+                
+                .span-6{
+                    float: left;
+                    display: block;
+                    >img{
+                        margin-right: 5px;
+                    }
+                }
+                .span-7{
+                    float: right;
+                    display: block;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+            }
+            .gou-main{
+                .product{
+                    width: 225px;
+                    height: 326px;
+                    float: left;
+                    >.img{
+                        width: 220px;
+                        height: 220px;
+                        margin: 0 auto;
+                        cursor: pointer;
+                       
+                    }
+                    >.title{
+                        text-align: center;
+                        font-size: 10px;
+                        height: 36px;
+                        line-height: 36px;
+                        cursor: pointer;
+                        
+                    }
+                    >.title:hover{
+                        color: #d22147;
+                    }
+                    >.price{
+                        text-align: center;
+                        font-size: 12px;
+                        height: 28px;
+                        line-height: 28px;
+                        color: #d22147;
+                    }
+                    >.jishi{
+                        text-align: center;
+                        height: 40px;
+                        font-size: 12px;
+                        
+                        >span>img{
+                            padding-right: 10px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .gou-right{
+            width: 200px;
+            height: 336px;
+            padding-top: 30px;
+            padding-left: 20px;
+            background: white;
+            float: right;
+            >img{
+                
+                width: 180px;
+                height: 180px;
+                
+            }
+            >.title{
+                font-size: 12px;
+                line-height: 20px;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+                a:hover{
+                    color: #d22147;
+                }
+            }
+            >.price{
+                color: #d22147;
+                font-size: 18px;
+                font-weight: 600;
+                height: 36px;
+                line-height: 36px;
+                text-align: center;
+            }
+            >.tuan{
+                width: 180px;
+                height: 50px;
+                background: #d22147;
+                line-height: 50px;
+                text-align: center;
+                font-size: 18px;
+                color: white;
+            }
+        }
+    }
+    .tab{
+        width: 1182px;
+        height: 366px;
+        padding: 0 40px;
+        background: #f3f3f3;
+        >p{
+            width: 1182px;
+            height: 50px;
+            line-height: 50px;
+            background: #fafafa;
+            >span{
+                float: left;
+                width: 197px;
+                height: 50px;
+                text-align: center;
+                font-size: 18px;
+                
+            }
+            >span:hover{
+                background: white;
+                color: #d22147;
+                border-top: 2px solid #d22147;
+            }
+        }
+        >.products{
+            width: 1182px;
+            height: 316px;
+            background: white;
+        }
+    }
+}

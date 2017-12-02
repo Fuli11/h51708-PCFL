@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.footer{
+    
+    width: 1182px;
+    height: 260px;
+    padding: 0 40px;
+    padding-top: 40px;
+    background: #616161;
+    margin: 0 auto;
+    .footer-1{
+        height: 140px;
+        .num-1{
+        width: 195px;
+        height: 140px;
+        float: left;
+        >h6{
+            font-size: 14px;
+            color: white;
+        }
+        >p{
+            a{
+                font-size: 14px;
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+    }
+    .footer-2{
+      width: 290px;
+      height: 80px;
+      font-size: 12px;
+      line-height: 26px;
+      color: black;
+      margin: 30px auto;
+      color: white;
+      text-align: center; }
+      >img {
+        margin: 0 auto;
+      }
+    
+}

@@ -1,18 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
 	<script src="lib/requirejs/require.js" data-main="/js/index"></script>
 </head>
 <body>
 	<div class="header"></div>
 	<div class="main">
+		<div class="banner">
+			<ul class="banner-1">
+				
+			</ul>
+			<ul class="banner-2">
+				<li><a href="#">香水/试香/礼品礼物</a><span>></span></li>
+				<li><a href="#">美妆/彩妆/个人护理</a><span>></span></li>
+				<li><a href="#">保健品/食品/饮品</a><span>></span></li>
+				<li><a href="#">厨房电器/生活电器</a><span>></span></li>
+				<li><a href="#">家居/家纺/卫浴用品</a><span>></span></li>
+				<li><a href="#">鞋服/手表/箱包配饰</a><span>></span></li>
+				<li><a href="#">手机/数码/电脑/配件</a><span>></span></li>
+			</ul>	
+			<div class="banner-3">
+				<div class="banner-3-top">
+					商城公告
+					
+				</div>
+				<ul class="banner-3-middle">
+					<li><a href="#">百悦网系统升级，登陆、会员帐...</a></li>
+					<li><a href="#">百悦网微信商城升级公告</a></li>
+					<li><a href="#">百悦网分期付款功能即将上线</a></li>
+				</ul>
+				<div class="banner-3-bottom">
+					<img src="img/images-index/20171109104830_4662.jpg"/>
+				</div>
+				
+			</div>
+		</div>
+		<div class="small-banner">
+			
+		</div>
+		<!-- 定义模板 -->
+		<!-- {{ each 数组 as 元素 索引 }} -->
+		<script type="text/html" id="s_banner_template">
+			{{ each s_banners as s_banner index }}
+			<div class="s_banner">
+				<div class="img"><a href="#"><img src="{{s_banner.img}}"></a></div>
+					
+				<input type="hidden" class="id" value="{{s_banner.id}}">
+					
+			</div>
+			{{/each}}
+		</script>	
+		<div class="gou">
+			<div class="gou-left">
+				<p>
+					<span class="span-6"><img src="/img/images-index/cout_bg_03.jpg"/>限时抢购</span>
+					<span class="span-7"><a href="#">更多</a></span>
+				</p>
+				<div class="gou-main">
+					
+				</div>
+				<!-- 定义模板 -->
+				<!-- {{ each 数组 as 元素 索引 }} -->
+				<script type="text/html" id="gou-main_template">
+					{{ each products as product index }}
+					<div class="product">
+						<div class="img"><img src="{{product.img}}"></div>
+						<div class="title">{{product.title}}</div>
+						<div class="price">{{product.price.toFixed(2)}}</div>
+						<input type="hidden" class="id" value="{{product.id}}">
+						<div class="jishi"><span><img src="/img/images-index/cout_bg_11.jpg"/></span>距结束：8天14时26分秒</div>
+					</div>
+					{{/each}}
+				</script>
+			</div>
+			<div class="gou-right">
+				<img src="/img/images-index/180_201709161637170457100.jpg"/>
+				<div class="title">
+						<a href="#">WWF福腾宝18/10不锈钢意粉锅24cm</a>
+				</div>
+				<div class="price">
+					559.00
+				</div>
+				<div class="tuan">
+					马上参团
+				</div>
+			</div>
+		</div>
+		<div class="tab">
+			<p><span>香水</span><span>美妆</span><span>家电</span><span>家居</span><span>鞋包</span><span>食品</span></p>
+			<div class="products">
+				<ul class="products-1">
+					<li>
+					<!-- 定义模板 -->
+					<!-- {{ each 数组 as 元素 索引 }} -->
+					<script type="text/html" id="gou-main_template">
+						{{ each products as product index }}
+						<div class="product">
+							<div class="img"><img src="{{product.img}}"></div>
+							<div class="title">{{product.title}}</div>
+							<div class="price">{{product.price.toFixed(2)}}</div>
+							<input type="hidden" class="id" value="{{product.id}}">
+							
+						</div>
+						{{/each}}
+					</script>	
+					</li>
+				</ul>
+			</div>
+			
+		</div>
 		
 	</div>
 	<div class="footer"></div>
 
-	<script type="text/html" id="floor_template">
+	<!--
+    	作者：offline
+    	时间：2017-12-01
+    	描述：
+  <script type="text/html" id="floor_template">
 		{{each floors as floor}}
 		<div class="floor" style="width: 1000px; height:500px;">
 			<h1>{{floor.title}}</h1>
@@ -25,6 +133,6 @@
 			{{/each}}
 		</div>
 		{{/each}}
-	</script>
+	</script>  -->
 </body>
 </html>

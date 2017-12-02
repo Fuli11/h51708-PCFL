@@ -1,0 +1,12 @@
+{
+	"status":1,
+	"message":"success",
+	"data":[
+		{"id":21, "title":"Anna sui 安娜苏波西米亚金色女神浪漫之星女士淡香水75ml简装", "img":"/img/images-index/220_201709261808060088170.jpg", "price":229.00},
+		{"id":22, "title":"miu miu缪缪 同名女士香水淡香水100ml", "img":"/img/images-index/220_201711042018028809460.jpg", "price":629.00},
+		{"id":23, "title":"Dior 迪奥 甜心小姐女士香水四件套 5ML*4", "img":"/img/images-index/220_201709221438474445450.jpg", "price":499.00},
+		{"id":24, "title":"Burberry 博柏利 巴宝莉风格系列男士香水4件套 5ml*4", "img":"/img/images-index/220_201709221419536813530.jpg", "price":329.00},
+		{"id":25, "title":"Lanvin 浪凡 光韵 我愿意 紫漾珍妮 真我魅力 珍浪凡女士香水5件", "img":"/img/images-index/220_201709211703328348460.jpg", "price":859.00}
+		
+	]
+}

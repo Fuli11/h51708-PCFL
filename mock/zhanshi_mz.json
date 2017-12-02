@@ -1,0 +1,12 @@
+{
+	"status":1,
+	"message":"success",
+	"data":[
+		{"id":31, "title":"Its skin伊思 红参蜗牛修复面膜 5片", "img":"/img/images-index/220_201712011050561825210.jpg", "price":139.00},
+		{"id":32, "title":"DiaForce 第二代钻石黄金贵妇眼膜 60片", "img":"/img/images-index/220_201712011007543779860.jpg", "price":119.00},
+		{"id":33, "title":"SHANGPREE香蒲丽 海洋水光眼膜60片", "img":"/img/images-index/220_201711300956555672410.jpg", "price":159.00},
+		{"id":34, "title":"SHANGPREE香蒲丽 人参果修复眼膜60片", "img":"/img/images-index/220_201711300953167612560.jpg", "price":159.00},
+		{"id":35, "title":"Mediheal美迪惠尔Line Friends I.P.I清澈透亮面膜10片", "img":"/img/images-index/220_201711291119215685740.jpg", "price":99.00}
+		
+	]
+}
