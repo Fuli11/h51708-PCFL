@@ -1,0 +1,13 @@
+{
+	"status":1,
+	"message":"success",
+	"data":[
+		{"id":101, "title":"hurom/惠人原汁机 HU7W...", "img":"/img/images-index/180_201711141457563070250.jpg", "price":3980.00},
+		{"id":102, "title":"Coway 厨下式 五级过滤净...", "img":"/img/images-index/180_201711281308346847310.jpg", "price":2880.00},
+		{"id":103, "title":"美的(Midea)台式迷你饮水...", "img":"/img/images-index/180_201711281018242015970.jpg", "price":129.00},
+		{"id":104, "title":"美的（Midea） 电压力锅...", "img":"/img/images-index/180_201711281004358869420.jpg", "price":419.00},
+		{"id":105, "title":"美的(Midea)电饭煲HS401...", "img":"/img/images-index/180_201711280959263667980.jpg", "price":859.00},
+		{"id":106, "title":"CUCKOO/福库 CRP-M10...", "img":"/img/images-index/180_201711271016207935940.jpg", "price":1360.00}
+		
+	]
+}

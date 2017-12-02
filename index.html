@@ -93,26 +93,165 @@
 			<p><span>香水</span><span>美妆</span><span>家电</span><span>家居</span><span>鞋包</span><span>食品</span></p>
 			<div class="products">
 				<ul class="products-1">
-					<li>
-					<!-- 定义模板 -->
-					<!-- {{ each 数组 as 元素 索引 }} -->
-					<script type="text/html" id="gou-main_template">
-						{{ each products as product index }}
-						<div class="product">
-							<div class="img"><img src="{{product.img}}"></div>
-							<div class="title">{{product.title}}</div>
-							<div class="price">{{product.price.toFixed(2)}}</div>
-							<input type="hidden" class="id" value="{{product.id}}">
-							
-						</div>
-						{{/each}}
-					</script>	
+					<li class="li-1">
+					
+					</li>
+					<li class="li-2">
+					
+					</li>
+					<li class="li-3">
+					
+					</li>
+					<li class="li-4">
+					
+					</li>
+					
+					<li class="li-5">
+					
+					</li>
+					<li class="li-6">
+					
 					</li>
 				</ul>
 			</div>
 			
 		</div>
-		
+		<!-- 定义模板 -->
+		<!-- {{ each 数组 as 元素 索引 }} -->
+		<script type="text/html" id="zhanshi_xs_template">
+			{{ each products as product index }}
+			<div class="product">
+				<div class="img"><img src="{{product.img}}"></div>
+				<div class="title">{{product.title}}</div>
+				<div class="price">{{product.price.toFixed(2)}}</div>
+				<input type="hidden" class="id" value="{{product.id}}">
+								
+			</div>
+			{{/each}}
+		</script>
+		<!--香水香氛-->
+		<div class="floor_xiang">
+			<div class="fx_top">
+				<h3><img src="/img/images-index/floor-T.jpg"/>香水香氛</h3>
+				<p>
+					<span>女香</span>
+					<span>男香</span>
+					<span>香调</span>
+					<span>类型</span>
+					<span>沙龙香水</span>
+					<span>当季推荐</span>
+				</p>
+			</div>
+			<div class="fx_main">
+				<div class="fx_main_left">
+					<img src="/img/images-index/20171114105706_0640.jpg"/>
+				</div>
+				<div class="fx_main_middle">
+					
+				</div>
+				<!-- 定义模板 -->
+				<!-- {{ each 数组 as 元素 索引 }} -->
+				<script type="text/html" id="floor_xs_template">
+					{{ each products as product index }}
+					<div class="product">
+						<div class="img"><img src="{{product.img}}"></div>
+						<div class="title">{{product.title}}</div>
+						<div class="price">{{product.price.toFixed(2)}}</div>
+						<input type="hidden" class="id" value="{{product.id}}">
+										
+					</div>
+					{{/each}}
+				</script>
+				<div class="fx_main_right">
+					
+				</div>
+			</div>
+			<div class="fx_banner">
+				<img src="/img/images-index/20171106102704_2595.jpg"/>
+			</div>
+		</div>
+		<!--美容护肤-->
+		<div class="floor_mr">
+			<div class="fm_top">
+				<h3><img src="/img/images-index/20160712093049_5192.png"/>美容护肤</h3>
+				<p>
+					<span>彩妆</span>
+					<span>护肤</span>
+					<span>身体护理</span>
+					<span>美发护发</span>
+					<span>口腔护理</span>
+					<span>女性护理</span>
+					<span>男士护理</span>
+				</p>
+			</div>
+			<div class="fm_main">
+				<div class="fm_main_left">
+					<img src="/img/images-index/20171106102723_6035.jpg"/>
+				</div>
+				<div class="fm_main_middle">
+					
+				</div>
+				<!-- 定义模板 -->
+				<!-- {{ each 数组 as 元素 索引 }} -->
+				<script type="text/html" id="floor_mr_template">
+					{{ each products as product index }}
+					<div class="product">
+						<div class="img"><img src="{{product.img}}"></div>
+						<div class="title">{{product.title}}</div>
+						<div class="price">{{product.price.toFixed(2)}}</div>
+						<input type="hidden" class="id" value="{{product.id}}">
+										
+					</div>
+					{{/each}}
+				</script>
+				<div class="fm_main_right">
+					
+				</div>
+			</div>
+			<div class="fm_banner">
+				<img src="/img/images-index/20171106102800_1232.jpg"/>
+			</div>
+		</div>
+		<!--家用电器-->
+		<div class="floor_jy">
+			<div class="fjy_top">
+				<h3><img src="/img/images-index/20160712093045_3594.png"/>家用电器</h3>
+				<p>
+					<span>厨房电器</span>
+					<span>生活电器</span>
+					<span>大家电</span>
+					<span>个护健康</span>
+					
+				</p>
+			</div>
+			<div class="fjy_main">
+				<div class="fjy_main_left">
+					<img src="/img/images-index/20171106102723_6035.jpg"/>
+				</div>
+				<div class="fjy_main_middle">
+					
+				</div>
+				<!-- 定义模板 -->
+				<!-- {{ each 数组 as 元素 索引 }} -->
+				<script type="text/html" id="floor_jy_template">
+					{{ each products as product index }}
+					<div class="product">
+						<div class="img"><img src="{{product.img}}"></div>
+						<div class="title">{{product.title}}</div>
+						<div class="price">{{product.price.toFixed(2)}}</div>
+						<input type="hidden" class="id" value="{{product.id}}">
+										
+					</div>
+					{{/each}}
+				</script>
+				<div class="fjy_main_right">
+					
+				</div>
+			</div>
+			<div class="fjy_banner">
+				<img src="/img/images-index/20171106163753_6738.jpg"/>
+			</div>
+		</div>
 	</div>
 	<div class="footer"></div>
 
